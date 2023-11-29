@@ -28,4 +28,4 @@ replay_pid*
 *.iml
 
 # Input files
-java/resources/**
+java/resources/*
