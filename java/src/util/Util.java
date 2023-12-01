@@ -9,7 +9,7 @@ import java.util.List;
 public class Util {
 
     public static List<String> getFileContent(final int day) {
-        URL resource = Util.class.getClassLoader().getResource("day" + day + "/input.txt");
+        URL resource = Util.class.getClassLoader().getResource("days/day" + day + "/input.txt");
         return getContent(resource);
     }
 
@@ -18,7 +18,7 @@ public class Util {
     }
 
     public static List<String> getTestFileContent(final int day) {
-        URL resource = Util.class.getClassLoader().getResource("day" + day + "/test.txt");
+        URL resource = Util.class.getClassLoader().getResource("days/day" + day + "/test.txt");
         return getContent(resource);
     }
 
