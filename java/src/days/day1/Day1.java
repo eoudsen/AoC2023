@@ -15,7 +15,8 @@ public class Day1 {
 
     public static Integer part2(final List<String> input) {
         return input.stream()
-                .map(line -> extractNumber(replaceLetters(line)))
+                .map(Day1::replaceLetters)
+                .map(Day1::extractNumber)
                 .reduce(0, Integer::sum);
     }
 
