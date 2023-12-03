@@ -7,11 +7,13 @@ import java.util.List;
 public class Day3 {
 
     public static Integer part1(final List<String> input) {
-        return 0;
+        final Schematic schematic = new Schematic(input);
+        return schematic.countPartNumbers();
     }
 
     public static Integer part2(final List<String> input) {
-        return 0;
+        final Schematic schematic = new Schematic(input);
+        return schematic.findGearRatio();
     }
 
     public static void main(String... args) {
