@@ -1,4 +1,4 @@
-package days.day5;
+package util;
 
 public record Coordinate(int x, int y) {
 }
