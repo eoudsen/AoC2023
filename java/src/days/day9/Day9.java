@@ -2,16 +2,27 @@ package days.day9;
 
 import util.Util;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Day9 {
 
-    public static Integer part1(final List<String> input) {
-        return 0;
+    public static Long part1(final List<String> input) {
+        return input.stream()
+            .map(line -> new Extrapolation(stringToListLong(line)))
+            .map(Extrapolation::calculate)
+            .reduce(0L, Long::sum);
     }
 
-    public static Integer part2(final List<String> input) {
-        return 0;
+    public static Long part2(final List<String> input) {
+        return input.stream()
+                .map(line -> new Extrapolation(stringToListLong(line).reversed()))
+                .map(Extrapolation::calculate)
+                .reduce(0L, Long::sum);
+    }
+
+    private static List<Long> stringToListLong(final String input) {
+        return Arrays.stream(input.split(" ")).map(Long::parseLong).toList();
     }
 
     public static void main(String... args) {

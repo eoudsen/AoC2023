@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Grid {
 
-    private final char[][] grid;
+    protected final char[][] grid;
 
     public Grid(final List<String> input) {
         this.grid = new char[input.get(0).length()][input.size()];
